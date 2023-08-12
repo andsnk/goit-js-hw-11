@@ -1,0 +1,117 @@
+ul {
+    padding: 0;
+    margin: 0;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  p {
+    margin: 0;
+  }
+
+  input {
+    position: relative;
+    height: 32px;
+    width: 320px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+  }
+  
+  svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .is-hidden {
+    opacity: 0;
+  }
+
+  .search-form {
+    z-index: 999;
+    height: 50px;
+    background-color: rgb(77, 90, 229, 0.8);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+  .search-btn-wrap {
+    position: relative;
+  }
+  
+  .search-btn {
+    position: absolute;
+    right: 1px;
+    top: -16px;
+    height: 32px;
+    border: none;
+  }
+  
+  .gallery {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 30px auto;
+  }
+  
+  .photo-card-wrap {
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #f0f0f0;
+    padding: 0px 0 20px 0px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+      border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .photo-card-wrap:hover {
+
+    box-shadow: 4px 4px 6px 4px rgba(0, 0, 0, 0.1)
+  }
+  
+  .info {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .info-item {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  
+  .info-top-text {
+    margin: 15px 15px 5px 15px;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: smaller;
+    color: #2f2f37;
+  }
+  
+  .info-bottom-text {
+    font-weight: 300;
+    font-size: small;
+    color: #aaaaaa;
+  }
+  
+  .load-more-wrap {
+    display: flex;
+    justify-content: center;
+    margin: 30px auto;
+  }
+  
+  .load-more {
+    text-transform: uppercase;
+    font-weight: 600;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    color: #2f2f37
+  }

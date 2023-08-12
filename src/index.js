@@ -37,7 +37,7 @@ function submitForm(evt) {
           );
       })
       .catch(error => Notiflix.Notify.failure(error.message));
-  } else Notiflix.Notify.info('Please fill in the search field');
+  } else Notiflix.Notify.warning('Please fill in the search field');
 }
 
 function createMarkup(data) {
@@ -52,23 +52,25 @@ function createMarkup(data) {
         comments,
         downloads,
       }) =>
-        `<a href="${largeImageURL}" class="photo-card">
-      <img src="${webformatURL}" alt="${tags}" loading="lazy" width="300px" height="200px" />
+        `<div class="photo-card-wrap">
+        <a href="${largeImageURL}" class="photo-card">
+      <img src="${webformatURL}" alt="${tags}" loading="lazy" width="380px" height="230px" />
       <div class="info">
         <p class="info-item">
-          <b>Likes</b>${likes}
+          <span class="info-top-text">Likes</span><span class="info-bottom-text">${likes}</span>
         </p>
         <p class="info-item">
-          <b>Views</b>${views}
+          <span class="info-top-text">Views</span><span class="info-bottom-text">${views}</span>
         </p>
         <p class="info-item">
-          <b>Comments</b>${comments}
+          <span class="info-top-text">Comments</span><span class="info-bottom-text">${comments}</span>
         </p>
         <p class="info-item">
-          <b>Downloads</b>${downloads}
+          <span class="info-top-text">Downloads</span><span class="info-bottom-text">${downloads}</span>
         </p>
       </div>
-    </a>`
+    </a>
+    </div>`
     )
     .join('');
   gallery.insertAdjacentHTML('beforeend', markup);
