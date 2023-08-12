@@ -29,7 +29,7 @@ function submitForm(evt) {
           loadMore.classList.remove('is-hidden');
           totalPages = Math.ceil(data.totalHits / 40);
           console.log(totalPages);
-          Notiflix.Notify.success(`Success, found ${data.totalHits} images`);
+          Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images`);
           form.reset();
         } else
           Notiflix.Notify.failure(
@@ -86,6 +86,14 @@ function onLoadMore() {
           "We're sorry, but you've reached the end of search results."
         );
       }
+      const { height: cardHeight } = document
+        .querySelector('.gallery')
+        .firstElementChild.getBoundingClientRect();
+
+      window.scrollBy({
+        top: cardHeight * 2,
+        behavior: 'smooth',
+      });
     })
     .catch(error => Notiflix.Notify.failure(error.message));
 }
