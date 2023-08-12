@@ -5,18 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Search images</title>
     <link rel="stylesheet" href="./sass/index.scss" />
+    <script src="./index.js" type="module"></script>
   </head>
   <body>
-    <form class="search-form-js">
+    <form class="search-form" id="search-form">
       <input
         type="text"
-        name="name"
+        name="searchQuery"
         autocomplete="off"
         placeholder="Search images..."
       />
-      <button type="submit">Search</button>
-      <div class="gallery-js"></div>
+      <button class="search-btn" type="submit">
+        <svg class="search-icon">
+          <use href="./images/search.svg#icon-search"></use>
+        </svg>
+      </button>
     </form>
-    <script src="./index.js" type="module"></script>
+    <div class="gallery">
+      <!-- Картки зображень -->
+    </div>
+    <button type="button" class="load-more is-hidden">Load more</button>
   </body>
 </html>

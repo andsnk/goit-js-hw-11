@@ -26,3 +26,62 @@
   background-size: cover;
   background-position: center;
 }
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+p {
+  margin: 0;
+}
+
+svg {
+  width: 16px;
+  height: 16px;
+}
+
+.search-btn {
+  position: absolute;
+  left: 24px;
+  height: 32px;
+  border: none;
+   
+   
+}
+
+input {
+  position: relative;
+  height: 32px;
+  width: 320px;
+  border: none;
+  border-radius: 2px;
+  outline: none;
+  font-size: 20px;
+}
+
+.search-form {
+    z-index: 999;
+    height: 50px;
+    background-color: rgb(77, 90, 229, 0.8);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+.is-hidden {
+  opacity: 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
