@@ -2,6 +2,7 @@ import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
 import { getPhoto } from './js/api';
+import { scrollToTop, showScroll } from './js/scroll';
 
 const form = document.querySelector('.search-form');
 const loadMore = document.querySelector('.load-more');
