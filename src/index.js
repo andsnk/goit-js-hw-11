@@ -14,7 +14,10 @@ loadMore.addEventListener('click', onLoadMore);
 let page = 1;
 let searchQuery = '';
 let totalPages = 0;
-const lightbox = new SimpleLightbox('.gallery a');
+const lightbox = new SimpleLightbox('.gallery a', {
+  captionsData: 'alt',
+  captionDelay: 250,
+});
 
 function submitForm(evt) {
   evt.preventDefault();
