@@ -154,9 +154,15 @@ ul {
     bottom: 30px;
     right: 30px;
     border: none;
+    opacity: 0;
     background-color: rgba(0, 0, 0, 0.3);
     transition: background-color var(--animation),
-    transform var(--animation)
+    transform var(--animation),
+    opacity var(--animation);
+  }
+
+  .is-visible {
+    opacity: 1;
   }
 
   .up-icon {

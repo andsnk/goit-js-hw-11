@@ -5,9 +5,9 @@ upScrollLink.addEventListener('click', scrollToTop);
 
 export function showScroll() {
   if (window.scrollY > 400) {
-    upScrollLink.classList.remove('is-hidden');
+    upScrollLink.classList.add('is-visible');
   } else {
-    upScrollLink.classList.add('is-hidden');
+    upScrollLink.classList.remove('is-visible');
   }
 }
 
