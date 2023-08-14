@@ -1,6 +1,12 @@
 import SimpleLightbox from 'simplelightbox';
 import 'simplelightbox/dist/simple-lightbox.min.css';
 import Notiflix from 'notiflix';
+Notiflix.Notify.init({
+  width: '280px',
+  position: 'top',
+  distance: '60px',
+  opacity: 1,
+});
 import { getPhoto } from './js/api';
 import { scrollToTop, showScroll } from './js/scroll';
 
@@ -24,15 +30,16 @@ function submitForm(evt) {
   page = 1;
   gallery.innerHTML = '';
   loadMore.classList.add('is-hidden');
-  searchQuery = evt.currentTarget.elements.searchQuery.value;
+  searchQuery = evt.currentTarget.elements.searchQuery.value.trim();
   if (searchQuery) {
     getPhoto(searchQuery, page)
       .then(data => {
         if (data.hits.length !== 0) {
           createMarkup(data);
-          loadMore.classList.remove('is-hidden');
           totalPages = Math.ceil(data.totalHits / 40);
-          console.log(totalPages);
+          if (page !== totalPages) {
+            loadMore.classList.remove('is-hidden');
+          }
           Notiflix.Notify.success(`Hooray! We found ${data.totalHits} images`);
           form.reset();
         } else
